@@ -27,6 +27,7 @@ function getValidSort(query, allowedSorts) {
 }
 
 function parseValidFiltersFromQuery(req, allowedFilters) {
+	//console.log('Celine Rakab: reached mods.flags.list');
 	return allowedFilters.reduce((memo, cur) => {
 		if (Object.prototype.hasOwnProperty.call(req.query, cur)) {
 			const val = req.query[cur];
